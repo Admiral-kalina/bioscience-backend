@@ -1,6 +1,4 @@
-module.exports = ({}) => ({
-  // ...
-
+module.exports = ({ env }) => ({
   email: {
     config: {
       provider: 'nodemailer',
@@ -11,8 +9,8 @@ module.exports = ({}) => ({
         tls: false,
         port: 465,
         auth: {
-          user: 'kalinichenko.andriy.smr@gmail.com',
-          pass: 'iiuf awfh ousb srox',
+          user: env('USER_MAIL'),
+          pass: env('USER_PASSWORD'),
         },
       },
       settings: {
