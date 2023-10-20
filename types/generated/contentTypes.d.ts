@@ -474,6 +474,59 @@ export interface ApiCourseCourse extends Schema.CollectionType {
   };
 }
 
+export interface ApiFeedbackFeedback extends Schema.CollectionType {
+  collectionName: 'feedbacks';
+  info: {
+    singularName: 'feedback';
+    pluralName: 'feedbacks';
+    displayName: 'feedback';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    userName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    text: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::feedback.feedback',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::feedback.feedback',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::feedback.feedback',
+      'oneToMany',
+      'api::feedback.feedback'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
   collectionName: 'webbinarrs';
   info: {
@@ -946,6 +999,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::course.course': ApiCourseCourse;
+      'api::feedback.feedback': ApiFeedbackFeedback;
       'api::webbinarr.webbinarr': ApiWebbinarrWebbinarr;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
