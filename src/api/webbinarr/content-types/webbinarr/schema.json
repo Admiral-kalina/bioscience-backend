@@ -128,13 +128,13 @@
         }
       }
     },
-    "presentationLinkv": {
-      "type": "richtext",
+    "presentationLink": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string"
     },
     "image": {
       "allowedTypes": [

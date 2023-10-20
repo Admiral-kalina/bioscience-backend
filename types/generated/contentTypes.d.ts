@@ -575,7 +575,7 @@ export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    presentationLinkv: Attribute.RichText &
+    presentationLink: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
