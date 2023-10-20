@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "webinarrs",
+  "collectionName": "webbinarrs",
   "info": {
-    "singularName": "webinarr",
-    "pluralName": "webinarrs",
+    "singularName": "webbinarr",
+    "pluralName": "webbinarrs",
     "displayName": "webbinarr",
     "description": ""
   },
@@ -81,7 +81,7 @@
       }
     },
     "descriptionTitle": {
-      "type": "text",
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -89,7 +89,7 @@
       }
     },
     "descriptionSubtitle": {
-      "type": "text",
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -128,8 +128,8 @@
         }
       }
     },
-    "presentationLink": {
-      "type": "string",
+    "presentationLinkv": {
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -144,7 +144,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true

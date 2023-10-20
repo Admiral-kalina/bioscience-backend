@@ -448,7 +448,7 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     webbinarrs: Attribute.Relation<
       'api::course.course',
       'oneToMany',
-      'api::webinarr.webinarr'
+      'api::webbinarr.webbinarr'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -474,11 +474,11 @@ export interface ApiCourseCourse extends Schema.CollectionType {
   };
 }
 
-export interface ApiWebinarrWebinarr extends Schema.CollectionType {
-  collectionName: 'webinarrs';
+export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
+  collectionName: 'webbinarrs';
   info: {
-    singularName: 'webinarr';
-    pluralName: 'webinarrs';
+    singularName: 'webbinarr';
+    pluralName: 'webbinarrs';
     displayName: 'webbinarr';
     description: '';
   };
@@ -539,13 +539,13 @@ export interface ApiWebinarrWebinarr extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    descriptionTitle: Attribute.Text &
+    descriptionTitle: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    descriptionSubtitle: Attribute.Text &
+    descriptionSubtitle: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -575,7 +575,7 @@ export interface ApiWebinarrWebinarr extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    presentationLink: Attribute.String &
+    presentationLinkv: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -591,21 +591,21 @@ export interface ApiWebinarrWebinarr extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::webinarr.webinarr',
+      'api::webbinarr.webbinarr',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::webinarr.webinarr',
+      'api::webbinarr.webbinarr',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     localizations: Attribute.Relation<
-      'api::webinarr.webinarr',
+      'api::webbinarr.webbinarr',
       'oneToMany',
-      'api::webinarr.webinarr'
+      'api::webbinarr.webbinarr'
     >;
     locale: Attribute.String;
   };
@@ -916,7 +916,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     webbinarrs: Attribute.Relation<
       'plugin::users-permissions.user',
       'oneToMany',
-      'api::webinarr.webinarr'
+      'api::webbinarr.webbinarr'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -946,7 +946,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::course.course': ApiCourseCourse;
-      'api::webinarr.webinarr': ApiWebinarrWebinarr;
+      'api::webbinarr.webbinarr': ApiWebbinarrWebbinarr;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;

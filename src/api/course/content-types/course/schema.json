@@ -107,7 +107,7 @@
     "webbinarrs": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::webinarr.webinarr"
+      "target": "api::webbinarr.webbinarr"
     }
   }
 }

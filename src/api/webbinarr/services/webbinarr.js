@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * webinarr service
+ * webbinarr service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::webinarr.webinarr');
+module.exports = createCoreService('api::webbinarr.webbinarr');

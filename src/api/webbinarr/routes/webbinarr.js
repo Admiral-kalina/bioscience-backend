@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * webinarr router
+ * webbinarr router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::webinarr.webinarr');
+module.exports = createCoreRouter('api::webbinarr.webbinarr');

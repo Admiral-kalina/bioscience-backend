@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * webinarr controller
+ * webbinarr controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::webinarr.webinarr');
+module.exports = createCoreController('api::webbinarr.webbinarr');
