@@ -9,13 +9,13 @@ module.exports = ({ env }) => ({
         tls: false,
         port: 465,
         auth: {
-          user: env('USER_MAIL'),
+          user: 'info@bioinnova.com.ua',
           pass: env('USER_PASSWORD'),
         },
       },
       settings: {
-        defaultFrom: env('USER_MAIL'),
-        defaultReplyTo: env('USER_MAIL'),
+        defaultFrom: 'info@bioinnova.com.ua',
+        defaultReplyTo: 'info@bioinnova.com.ua',
       },
     },
   },
