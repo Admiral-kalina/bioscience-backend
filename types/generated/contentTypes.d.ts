@@ -634,7 +634,7 @@ export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    image: Attribute.Media &
+    imageLink: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
