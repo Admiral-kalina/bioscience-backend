@@ -14,8 +14,8 @@ module.exports = ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: 'kalinichenko.andriy.smr@gmail.com',
-        defaultReplyTo: 'kalinamono@gmail.com',
+        defaultFrom: env('USER_MAIL'),
+        defaultReplyTo: env('USER_MAIL'),
       },
     },
   },
