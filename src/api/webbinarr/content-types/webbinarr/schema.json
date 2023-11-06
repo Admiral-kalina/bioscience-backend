@@ -64,14 +64,6 @@
         }
       }
     },
-    "topic": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "format": {
       "type": "string",
       "pluginOptions": {
@@ -151,6 +143,20 @@
         }
       },
       "type": "string"
+    },
+    "topic": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Pharmacovigilance",
+        "GMP-certification",
+        "Registration",
+        "ClinicalTrials"
+      ]
     }
   }
 }

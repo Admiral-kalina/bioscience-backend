@@ -110,9 +110,9 @@
       "type": "enumeration",
       "enum": [
         "Pharmacovigilance",
-        "GMP - certification",
+        "GMP-certification",
         "Registration",
-        "Clinical trials"
+        "ClinicalTrials"
       ]
     },
     "levelOfDifficulty": {

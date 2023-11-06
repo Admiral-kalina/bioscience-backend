@@ -447,9 +447,9 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     topic: Attribute.Enumeration<
       [
         'Pharmacovigilance',
-        'GMP - certification',
+        'GMP-certification',
         'Registration',
-        'Clinical trials'
+        'ClinicalTrials'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -593,12 +593,6 @@ export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    topic: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     format: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -654,6 +648,19 @@ export interface ApiWebbinarrWebbinarr extends Schema.CollectionType {
         };
       }>;
     levelOfDifficulty: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    topic: Attribute.Enumeration<
+      [
+        'Pharmacovigilance',
+        'GMP-certification',
+        'Registration',
+        'ClinicalTrials'
+      ]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
