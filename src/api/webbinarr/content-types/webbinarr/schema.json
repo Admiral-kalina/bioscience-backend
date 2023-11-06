@@ -143,6 +143,14 @@
         }
       },
       "type": "string"
+    },
+    "levelOfDifficulty": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

@@ -96,18 +96,32 @@
       },
       "type": "richtext"
     },
+    "webbinarrs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::webbinarr.webbinarr"
+    },
     "topic": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "Pharmacovigilance",
+        "GMP - certification",
+        "Registration",
+        "Clinical trials"
+      ]
     },
-    "webbinarrs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::webbinarr.webbinarr"
+    "levelOfDifficulty": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
