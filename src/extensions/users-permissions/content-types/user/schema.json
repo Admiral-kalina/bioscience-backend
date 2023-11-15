@@ -74,6 +74,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::webbinarr.webbinarr"
+    },
+    "passwordToView": {
+      "type": "string"
     }
   }
 }
